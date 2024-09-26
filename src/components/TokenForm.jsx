@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Stack, TextField, Button } from "@mui/material";
+import { tokenForm } from "../utils/constants";
 
 function TokenForm({ onGenerate, onClear }) {
   const [formValues, setFormValues] = useState({
@@ -22,7 +23,7 @@ function TokenForm({ onGenerate, onClear }) {
   return (
     <Stack spacing={2}>
       <TextField
-        label="Number of Blue Tokens"
+        label={tokenForm.BLUE_TOKEN_NUMBER}
         name="blueCount"
         type="number"
         value={formValues.blueCount}
@@ -30,14 +31,14 @@ function TokenForm({ onGenerate, onClear }) {
         fullWidth
       />
       <TextField
-        label="Prefix for Blue Tokens"
+        label={tokenForm.BLUE_PREFIX}
         name="bluePrefix"
         value={formValues.bluePrefix}
         onChange={handleChange}
         fullWidth
       />
       <TextField
-        label="Blue Tokens Per Row"
+        label={tokenForm.BLUE_PER_ROW}
         name="bluePerRow"
         type="number"
         value={formValues.bluePerRow}
@@ -45,7 +46,7 @@ function TokenForm({ onGenerate, onClear }) {
         fullWidth
       />
       <TextField
-        label="Number of Red Tokens"
+        label={tokenForm.RED_TOKEN_NUMBER}
         name="redCount"
         type="number"
         value={formValues.redCount}
@@ -53,14 +54,14 @@ function TokenForm({ onGenerate, onClear }) {
         fullWidth
       />
       <TextField
-        label="Prefix for Red Tokens"
+        label={tokenForm.RED_PREFIX}
         name="redPrefix"
         value={formValues.redPrefix}
         onChange={handleChange}
         fullWidth
       />
       <TextField
-        label="Red Tokens Per Row"
+        label={tokenForm.RED_PER_ROW}
         name="redPerRow"
         type="number"
         value={formValues.redPerRow}
@@ -69,10 +70,10 @@ function TokenForm({ onGenerate, onClear }) {
       />
       <Stack direction="row" spacing={2}>
         <Button variant="contained" onClick={handleGenerate}>
-          Generate
+          {tokenForm.GENERATE_CTA}
         </Button>
         <Button variant="outlined" onClick={onClear}>
-          Clear
+          {tokenForm.CLEAR_CTA}
         </Button>
       </Stack>
     </Stack>
