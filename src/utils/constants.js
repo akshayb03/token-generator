@@ -1,3 +1,7 @@
+export const home = {
+    HEADING: "Token Generator"
+}
+
 export const tokenForm = {
     GENERATE_CTA: "Generate",
     CLEAR_CTA: "Clear",
