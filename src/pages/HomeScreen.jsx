@@ -40,8 +40,16 @@ function HomeScreen() {
     }
   };
 
-  const handleClear = () => {
+  const handleClear = (setFormValues) => {
     setTokens({ blueTokens: [], redTokens: [] });
+    setFormValues({
+      blueCount: "",
+      bluePrefix: "",
+      bluePerRow: "",
+      redCount: "",
+      redPrefix: "",
+      redPerRow: "",
+    });
   };
 
   return (

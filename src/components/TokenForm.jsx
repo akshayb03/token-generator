@@ -72,7 +72,7 @@ function TokenForm({ onGenerate, onClear }) {
         <Button variant="contained" onClick={handleGenerate}>
           {tokenForm.GENERATE_CTA}
         </Button>
-        <Button variant="outlined" onClick={onClear}>
+        <Button variant="outlined" onClick={() => onClear(setFormValues)}>
           {tokenForm.CLEAR_CTA}
         </Button>
       </Stack>
